@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — CMAS | Compass Medical Admin Services</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f4c81;
+      text-decoration: none;
+    }
+    .logo span { color: #2b7de9; }
+    nav a {
+      margin-left: 24px;
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #0f4c81; }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      font-size: 14px;
+      color: #666;
+    }
+    .breadcrumb a { color: #2b7de9; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── Page Title ── */
+    .page-title {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin-bottom: 8px;
+    }
+    .page-title .updated {
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* ── Main Layout ── */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      display: flex;
+      gap: 48px;
+    }
+
+    /* ── Sidebar TOC ── */
+    .toc {
+      width: 240px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 80px;
+      align-self: flex-start;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+    .toc h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #999;
+      margin-bottom: 12px;
+    }
+    .toc ul { list-style: none; }
+    .toc li { margin-bottom: 6px; }
+    .toc a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+      display: block;
+      padding: 4px 0 4px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .toc a:hover,
+    .toc a.active {
+      color: #0f4c81;
+      border-left-color: #2b7de9;
+    }
+
+    /* ── Content ── */
+    .content {
+      flex: 1;
+      max-width: 800px;
+    }
+    .content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin: 40px 0 16px;
+      padding-top: 16px;
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 24px 0 12px;
+    }
+    .content p { margin-bottom: 16px; }
+    .content ul, .content ol {
+      margin: 0 0 16px 24px;
+    }
+    .content li { margin-bottom: 8px; }
+    .content strong { color: #0f4c81; }
+    .content a { color: #2b7de9; }
+
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 4px solid #2b7de9;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .contact-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .contact-box p { margin-bottom: 8px; }
+
+    /* ── Footer ── */
+    footer {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    footer p {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    footer a {
+      color: #2b7de9;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .toc { display: none; }
+      .toc-mobile { display: block; }
+      .content-wrapper { padding: 16px; }
+      .page-title { padding: 24px 16px 0; }
+      .page-title h1 { font-size: 26px; }
+      nav { display: none; }
+    }
+    @media (min-width: 769px) {
+      .toc-mobile { display: none; }
+    }
+
+    /* ── Mobile TOC ── */
+    .toc-mobile {
+      max-width: 800px;
+      margin: 16px auto;
+      padding: 0 24px;
+    }
+    .toc-mobile details {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .toc-mobile summary {
+      font-weight: 600;
+      font-size: 14px;
+      color: #0f4c81;
+      cursor: pointer;
+    }
+    .toc-mobile ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .toc-mobile li { margin-bottom: 6px; }
+    .toc-mobile a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* ── Print ── */
+    @media print {
+      header, .toc, .toc-mobile, footer, .breadcrumb { display: none; }
+      .content-wrapper { padding: 0; }
+      .content { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">CMAS<span>.</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; Terms of Use
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Terms of Use</h1>
+    <p class="updated">Last Updated: May 7, 2026</p>
+  </div>
+
+  <!-- Mobile TOC -->
+  <div class="toc-mobile">
+    <details>
+      <summary>Table of Contents</summary>
+      <ul>
+        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+        <li><a href="#services">2. Description of Services</a></li>
+        <li><a href="#eligibility">3. Eligibility</a></li>
+        <li><a href="#registration">4. Account Registration</a></li>
+        <li><a href="#physician-review">5. Physician Review Requirement</a></li>
+        <li><a href="#hipaa-baa">6. HIPAA & Business Associate Agreement</a></li>
+        <li><a href="#prohibited">7. Prohibited Uses</a></li>
+        <li><a href="#intellectual">8. Intellectual Property</a></li>
+        <li><a href="#user-content">9. User Content & Data Ownership</a></li>
+        <li><a href="#sla">10. Service Level Agreement</a></li>
+        <li><a href="#payment">11. Payment Terms</a></li>
+        <li><a href="#termination">12. Termination</a></li>
+        <li><a href="#limitation">13. Limitation of Liability</a></li>
+        <li><a href="#indemnification">14. Indemnification</a></li>
+        <li><a href="#disclaimer">15. Disclaimer of Warranties</a></li>
+        <li><a href="#governing">16. Governing Law</a></li>
+        <li><a href="#changes">17. Changes to Terms</a></li>
+        <li><a href="#contact">18. Contact Us</a></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+        <li><a href="#services">2. Description of Services</a></li>
+        <li><a href="#eligibility">3. Eligibility</a></li>
+        <li><a href="#registration">4. Account Registration</a></li>
+        <li><a href="#physician-review">5. Physician Review</a></li>
+        <li><a href="#hipaa-baa">6. HIPAA & BAA</a></li>
+        <li><a href="#prohibited">7. Prohibited Uses</a></li>
+        <li><a href="#intellectual">8. Intellectual Property</a></li>
+        <li><a href="#user-content">9. Data Ownership</a></li>
+        <li><a href="#sla">10. SLA</a></li>
+        <li><a href="#payment">11. Payment Terms</a></li>
+        <li><a href="#termination">12. Termination</a></li>
+        <li><a href="#limitation">13. Limitation of Liability</a></li>
+        <li><a href="#indemnification">14. Indemnification</a></li>
+        <li><a href="#disclaimer">15. Disclaimer</a></li>
+        <li><a href="#governing">16. Governing Law</a></li>
+        <li><a href="#changes">17. Changes</a></li>
+        <li><a href="#contact">18. Contact Us</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <h2 id="acceptance">1. Acceptance of Terms</h2>
+      <p>By accessing or using the services provided by Compass Medical Admin Services ("CMAS," "we," "our," or "us"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, you may not use our Services.</p>
+      <p>These Terms, together with our <a href="/privacy-policy">Privacy Policy</a> and any Business Associate Agreement (BAA) executed between you and CMAS, constitute the entire agreement governing your use of our Services.</p>
+
+      <h2 id="services">2. Description of Services</h2>
+      <p>CMAS provides AI-powered medical administrative services to licensed healthcare providers, including:</p>
+      <ul>
+        <li><strong>S1 — Clinical Note Entry:</strong> AI-assisted transcription and generation of clinical notes (SOAP format) from audio, dictation, or text input</li>
+        <li><strong>S2 — Clinical Coding & Charge Capture:</strong> Automated ICD-10 diagnosis coding, CPT procedure coding, and charge entry for billing purposes</li>
+        <li><strong>S3 — Clinic Message Handling:</strong> AI-powered triage, prioritization, and draft responses for clinical messages including prescription refills, lab results, referrals, and patient inquiries</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Important:</strong> Our Services are designed to <strong>assist</strong> healthcare providers — not replace clinical judgment. All AI-generated outputs require physician review and approval before becoming part of the medical record.
+      </div>
+
+      <h2 id="eligibility">3. Eligibility</h2>
+      <p>Our Services are available only to:</p>
+      <ul>
+        <li>Licensed healthcare providers (physicians, nurse practitioners, physician assistants) with valid credentials</li>
+        <li>Healthcare organizations, clinics, and medical practices operating in the United States</li>
+        <li>Entities that have executed a Business Associate Agreement (BAA) with CMAS</li>
+      </ul>
+      <p>You represent and warrant that you are duly licensed and authorized to practice medicine in your jurisdiction and that your use of our Services complies with all applicable laws and regulations.</p>
+
+      <h2 id="registration">4. Account Registration</h2>
+      <p>To use our Services, you must:</p>
+      <ol>
+        <li>Complete the registration process with accurate and current information</li>
+        <li>Provide valid professional credentials (NPI number, state license, DEA number if applicable)</li>
+        <li>Execute a Business Associate Agreement (BAA) with CMAS</li>
+        <li>Maintain the security of your account credentials</li>
+      </ol>
+      <p>You are responsible for all activities under your account. Notify us immediately of any unauthorized use.</p>
+
+      <h2 id="physician-review">5. Physician Review Requirement</h2>
+      <div class="warning-box">
+        <strong>Critical Requirement:</strong> All clinical outputs generated by our AI system — including clinical notes, coding suggestions, and message drafts — are preliminary and require review and approval by a licensed physician before they become final.
+      </div>
+      <ul>
+        <li>AI-generated notes are marked as "Draft — Pending Physician Review" until approved</li>
+        <li>The physician must review, modify if necessary, and electronically sign each note before it is entered into the medical record</li>
+        <li>CMAS is not responsible for clinical decisions made based on unapproved AI outputs</li>
+        <li>The final approved note is the legal medical record and remains the responsibility of the reviewing physician</li>
+      </ul>
+
+      <h2 id="hipaa-baa">6. HIPAA & Business Associate Agreement</h2>
+      <p>CMAS processes Protected Health Information (PHI) on behalf of Covered Entities. By using our Services:</p>
+      <ul>
+        <li>You agree to execute a BAA with CMAS before any PHI is processed</li>
+        <li>CMAS agrees to comply with HIPAA Privacy and Security Rules as a Business Associate</li>
+        <li>Both parties agree to report and mitigate security breaches per HIPAA Breach Notification requirements</li>
+        <li>PHI will only be used for the purposes outlined in the BAA and these Terms</li>
+      </ul>
+
+      <h2 id="prohibited">7. Prohibited Uses</h2>
+      <p>You may not use our Services to:</p>
+      <ul>
+        <li>Provide medical services without a valid license</li>
+        <li>Submit fraudulent, inaccurate, or misleading clinical or billing information</li>
+        <li>Access PHI of patients not under your care</li>
+        <li>Share account credentials with unauthorized individuals</li>
+        <li>Attempt to reverse-engineer, decompile, or exploit our AI systems</li>
+        <li>Use the Services for any purpose that violates HIPAA, state medical board regulations, or other applicable laws</li>
+        <li>Export, copy, or distribute PHI outside the scope of permitted uses</li>
+      </ul>
+
+      <h2 id="intellectual">8. Intellectual Property</h2>
+      <ul>
+        <li><strong>CMAS Platform:</strong> The CMAS platform, AI models, software, and user interface are owned by Compass Vitals, LLC. All rights are reserved.</li>
+        <li><strong>AI-Generated Drafts:</strong> Preliminary AI-generated clinical notes, coding suggestions, and message drafts are provided under license to assist the physician. Upon physician review and approval, the final clinical content becomes part of the medical record.</li>
+        <li><strong>Trademarks:</strong> "CMAS," "Compass Medical Admin Services," "CompassScribe," and related logos are trademarks of Compass Vitals, LLC.</li>
+      </ul>
+
+      <h2 id="user-content">9. User Content & Data Ownership</h2>
+      <ul>
+        <li><strong>You own your data:</strong> All clinical data, patient information, and practice data you submit remain your property</li>
+        <li><strong>License to process:</strong> You grant CMAS a limited license to process your data solely for the purpose of providing the Services</li>
+        <li><strong>AI training:</strong> CMAS does not use your PHI or clinical data to train AI models without explicit written consent</li>
+        <li><strong>Data portability:</strong> You may request export of your data at any time</li>
+      </ul>
+
+      <h2 id="sla">10. Service Level Agreement</h2>
+      <p>We strive to deliver reliable services with the following targets:</p>
+      <ul>
+        <li><strong>S1 — Clinical Notes:</strong> Turnaround time of 4–8 hours from submission to "Ready for Review"</li>
+        <li><strong>S2 — Coding:</strong> Same-day completion for submissions received by 3:00 PM local time</li>
+        <li><strong>S3 — Messages:</strong> Urgent messages processed within 1 hour; routine messages within 2 hours</li>
+        <li><strong>Uptime:</strong> Platform availability target of 99.5%</li>
+      </ul>
+      <p>These targets are goals, not guarantees. Specific SLA terms may be defined in your service agreement.</p>
+
+      <h2 id="payment">11. Payment Terms</h2>
+      <ul>
+        <li>Service fees are billed monthly in advance as outlined in your service agreement</li>
+        <li>Payment is due within 30 days of invoice date</li>
+        <li>Services may be suspended for accounts with overdue payments exceeding 60 days</li>
+        <li>Prices are subject to change with 30 days written notice</li>
+      </ul>
+
+      <h2 id="termination">12. Termination</h2>
+      <h3>By You:</h3>
+      <ul>
+        <li>You may terminate your account at any time with 30 days written notice</li>
+        <li>Upon termination, you may request export of your data</li>
+        <li>CMAS will securely delete your PHI within 60 days of termination (or per retention requirements in the BAA)</li>
+      </ul>
+      <h3>By CMAS:</h3>
+      <ul>
+        <li>CMAS may terminate for violation of these Terms, HIPAA non-compliance, or non-payment</li>
+        <li>CMAS will provide 30 days written notice except in cases of suspected HIPAA breach or illegal activity</li>
+        <li>Upon termination, CMAS will return or securely destroy all PHI per BAA requirements</li>
+      </ul>
+
+      <h2 id="limitation">13. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law:</p>
+      <ul>
+        <li>CMAS shall not be liable for any indirect, incidental, special, consequential, or punitive damages</li>
+        <li>CMAS's total liability shall not exceed the fees paid by you in the 12 months preceding the claim</li>
+        <li>CMAS is not liable for clinical outcomes resulting from the use of our Services — final clinical decisions are the sole responsibility of the licensed physician</li>
+        <li>CMAS is not liable for delays or failures caused by circumstances beyond our control (force majeure)</li>
+      </ul>
+
+      <h2 id="indemnification">14. Indemnification</h2>
+      <p>You agree to indemnify and hold harmless CMAS, Compass Vitals, LLC, and their officers, directors, and employees from any claims, damages, or expenses arising from:</p>
+      <ul>
+        <li>Your violation of these Terms</li>
+        <li>Your violation of HIPAA or other applicable laws</li>
+        <li>Clinical decisions made based on AI-generated outputs that were not properly reviewed and approved</li>
+        <li>Your negligent or improper use of the Services</li>
+      </ul>
+
+      <h2 id="disclaimer">15. Disclaimer of Warranties</h2>
+      <p>Our Services are provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including but not limited to:</p>
+      <ul>
+        <li>Merchantability and fitness for a particular purpose</li>
+        <li>Accuracy of AI-generated clinical content (which requires physician review)</li>
+        <li>Uninterrupted or error-free operation</li>
+        <li>Compatibility with all EMR systems or workflows</li>
+      </ul>
+
+      <h2 id="governing">16. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles. Any disputes arising from these Terms shall be resolved in the courts of San Diego County, California.</p>
+
+      <h2 id="changes">17. Changes to These Terms</h2>
+      <p>CMAS may update these Terms from time to time. When we make material changes:</p>
+      <ul>
+        <li>We will update the "Last Updated" date at the top of this page</li>
+        <li>We will notify registered users via email at least 30 days before changes take effect</li>
+        <li>Continued use of our Services after changes take effect constitutes acceptance</li>
+      </ul>
+
+      <h2 id="contact">18. Contact Us</h2>
+      <p>If you have questions about these Terms, contact us:</p>
+
+      <div class="contact-box">
+        <p><strong>Compass Medical Admin Services (CMAS)</strong></p>
+        <p>Operated by Compass Vitals, LLC</p>
+        <p>Email: <a href="mailto:legal@compassscribe.com">legal@compassscribe.com</a></p>
+        <p>Website: <a href="https://compassscribe.com">compassscribe.com</a></p>
+      </div>
+
+      <p style="margin-top: 32px; font-size: 14px; color: #888;">
+        See also: <a href="/privacy-policy">Privacy Policy</a>
+      </p>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Compass Medical Admin Services. All rights reserved.</p>
+      <p>
+        <a href="/privacy-policy">Privacy Policy</a> |
+        <a href="/terms-of-use">Terms of Use</a> |
+        <a href="/contact">Contact Us</a>
+      </p>
+      <p>Operated by Compass Vitals, LLC</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-spy for TOC highlight -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tocLinks = document.querySelectorAll('.toc a');
+      var sections = [];
+      tocLinks.forEach(function (link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function onScroll() {
+        var scrollPos = window.scrollY + 120;
+        var current = null;
+        sections.forEach(function (s) {
+          if (s.el.offsetTop <= scrollPos) current = s;
+        });
+        tocLinks.forEach(function (l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    });
+  </script>
+
+</body>
+</html>

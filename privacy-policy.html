@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CMAS | Compass Medical Admin Services</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f4c81;
+      text-decoration: none;
+    }
+    .logo span { color: #2b7de9; }
+    nav a {
+      margin-left: 24px;
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #0f4c81; }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      font-size: 14px;
+      color: #666;
+    }
+    .breadcrumb a { color: #2b7de9; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── Page Title ── */
+    .page-title {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin-bottom: 8px;
+    }
+    .page-title .updated {
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* ── Main Layout ── */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      display: flex;
+      gap: 48px;
+    }
+
+    /* ── Sidebar TOC ── */
+    .toc {
+      width: 240px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 80px;
+      align-self: flex-start;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+    .toc h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #999;
+      margin-bottom: 12px;
+    }
+    .toc ul { list-style: none; }
+    .toc li { margin-bottom: 6px; }
+    .toc a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+      display: block;
+      padding: 4px 0 4px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .toc a:hover,
+    .toc a.active {
+      color: #0f4c81;
+      border-left-color: #2b7de9;
+    }
+
+    /* ── Content ── */
+    .content {
+      flex: 1;
+      max-width: 800px;
+    }
+    .content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin: 40px 0 16px;
+      padding-top: 16px;
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 24px 0 12px;
+    }
+    .content p { margin-bottom: 16px; }
+    .content ul, .content ol {
+      margin: 0 0 16px 24px;
+    }
+    .content li { margin-bottom: 8px; }
+    .content strong { color: #0f4c81; }
+    .content a { color: #2b7de9; }
+
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 4px solid #2b7de9;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .contact-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .contact-box p { margin-bottom: 8px; }
+
+    /* ── Footer ── */
+    footer {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    footer p {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    footer a {
+      color: #2b7de9;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .toc { display: none; }
+      .toc-mobile { display: block; }
+      .content-wrapper { padding: 16px; }
+      .page-title { padding: 24px 16px 0; }
+      .page-title h1 { font-size: 26px; }
+      nav { display: none; }
+    }
+    @media (min-width: 769px) {
+      .toc-mobile { display: none; }
+    }
+
+    /* ── Mobile TOC ── */
+    .toc-mobile {
+      max-width: 800px;
+      margin: 16px auto;
+      padding: 0 24px;
+    }
+    .toc-mobile details {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .toc-mobile summary {
+      font-weight: 600;
+      font-size: 14px;
+      color: #0f4c81;
+      cursor: pointer;
+    }
+    .toc-mobile ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .toc-mobile li { margin-bottom: 6px; }
+    .toc-mobile a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* ── Print ── */
+    @media print {
+      header, .toc, .toc-mobile, footer, .breadcrumb { display: none; }
+      .content-wrapper { padding: 0; }
+      .content { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">CMAS<span>.</span></a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; Privacy Policy
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last Updated: May 7, 2026</p>
+  </div>
+
+  <!-- Mobile TOC -->
+  <div class="toc-mobile">
+    <details>
+      <summary>Table of Contents</summary>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#info-collect">2. Information We Collect</a></li>
+        <li><a href="#how-use">3. How We Use Your Information</a></li>
+        <li><a href="#hipaa">4. HIPAA Compliance</a></li>
+        <li><a href="#data-security">5. Data Security</a></li>
+        <li><a href="#third-parties">6. Third-Party Services</a></li>
+        <li><a href="#data-retention">7. Data Retention</a></li>
+        <li><a href="#your-rights">8. Your Rights</a></li>
+        <li><a href="#children">9. Children's Privacy</a></li>
+        <li><a href="#changes">10. Changes to This Policy</a></li>
+        <li><a href="#contact">11. Contact Us</a></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#info-collect">2. Information We Collect</a></li>
+        <li><a href="#how-use">3. How We Use Info</a></li>
+        <li><a href="#hipaa">4. HIPAA Compliance</a></li>
+        <li><a href="#data-security">5. Data Security</a></li>
+        <li><a href="#third-parties">6. Third-Party Services</a></li>
+        <li><a href="#data-retention">7. Data Retention</a></li>
+        <li><a href="#your-rights">8. Your Rights</a></li>
+        <li><a href="#children">9. Children's Privacy</a></li>
+        <li><a href="#changes">10. Changes to Policy</a></li>
+        <li><a href="#contact">11. Contact Us</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <h2 id="introduction">1. Introduction</h2>
+      <p>Compass Medical Admin Services ("<strong>CMAS</strong>," "we," "our," or "us") provides AI-powered medical administrative services to healthcare providers, including clinical note entry, medical coding, charge capture, and clinic message handling.</p>
+      <p>This Privacy Policy describes how we collect, use, disclose, and protect your information when you use our services, website, and platform (collectively, the "Services"). We are committed to protecting the privacy and security of all information entrusted to us, including Protected Health Information (PHI) as defined by HIPAA.</p>
+
+      <div class="highlight-box">
+        <strong>HIPAA Notice:</strong> CMAS operates as a Business Associate under HIPAA. All PHI we process on behalf of healthcare providers (Covered Entities) is governed by our Business Associate Agreement (BAA) and applicable HIPAA regulations.
+      </div>
+
+      <h2 id="info-collect">2. Information We Collect</h2>
+
+      <h3>2.1 Protected Health Information (PHI)</h3>
+      <p>In the course of providing Services to healthcare providers, we may process:</p>
+      <ul>
+        <li>Patient names, dates of birth, and demographic information</li>
+        <li>Clinical notes, SOAP notes, and medical records</li>
+        <li>Diagnosis codes (ICD-10) and procedure codes (CPT)</li>
+        <li>Prescription and medication information</li>
+        <li>Lab results, imaging reports, and referral documents</li>
+        <li>Insurance and billing information</li>
+        <li>Clinical messages (patient-provider communications)</li>
+      </ul>
+
+      <h3>2.2 Account Information</h3>
+      <p>When healthcare providers register for our Services, we collect:</p>
+      <ul>
+        <li>Provider name, credentials, and NPI number</li>
+        <li>Practice name, address, and contact information</li>
+        <li>Email address and login credentials</li>
+        <li>Billing and payment information</li>
+      </ul>
+
+      <h3>2.3 Usage and Technical Data</h3>
+      <ul>
+        <li>IP address and device information</li>
+        <li>Browser type and operating system</li>
+        <li>Pages visited and features used</li>
+        <li>Service usage patterns and analytics</li>
+        <li>Audit logs (access timestamps, actions performed)</li>
+      </ul>
+
+      <h2 id="how-use">3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li><strong>Provide Services:</strong> Process clinical notes, generate billing codes, handle clinic messages, and deliver medical admin support</li>
+        <li><strong>AI Processing:</strong> Use artificial intelligence to transcribe, code, and draft clinical documents for provider review and approval</li>
+        <li><strong>Quality Assurance:</strong> Monitor accuracy, conduct random QA checks, and improve AI performance</li>
+        <li><strong>Compliance:</strong> Maintain audit trails, meet HIPAA requirements, and respond to legal obligations</li>
+        <li><strong>Communication:</strong> Send service notifications, respond to support requests, and share updates</li>
+        <li><strong>Improvement:</strong> Analyze usage patterns to enhance our Services (using de-identified data only)</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Important:</strong> We never sell PHI or personal health data. We do not use PHI for marketing purposes. AI-generated outputs are always subject to physician review and approval before finalization.
+      </div>
+
+      <h2 id="hipaa">4. HIPAA Compliance</h2>
+      <p>CMAS complies with the Health Insurance Portability and Accountability Act (HIPAA), including:</p>
+      <ul>
+        <li><strong>Business Associate Agreement (BAA):</strong> We execute a BAA with each healthcare provider (Covered Entity) before processing any PHI</li>
+        <li><strong>Privacy Rule:</strong> We use and disclose PHI only as permitted by the BAA and HIPAA regulations</li>
+        <li><strong>Security Rule:</strong> We implement administrative, physical, and technical safeguards to protect ePHI</li>
+        <li><strong>Breach Notification Rule:</strong> We notify affected Covered Entities within 24 hours of discovering a breach of unsecured PHI</li>
+        <li><strong>Minimum Necessary Standard:</strong> We limit PHI access to the minimum necessary to perform our Services</li>
+      </ul>
+
+      <h2 id="data-security">5. Data Security</h2>
+      <p>We implement comprehensive security measures to protect your data:</p>
+      <ul>
+        <li><strong>Encryption:</strong> All data encrypted in transit (TLS 1.2+) and at rest (AES-256 / SSE-S3)</li>
+        <li><strong>Access Control:</strong> Role-based access, multi-factor authentication (MFA), and least-privilege principles</li>
+        <li><strong>Audit Logging:</strong> AWS CloudTrail monitors and logs all system activities for 6 years (per HIPAA requirements)</li>
+        <li><strong>Infrastructure:</strong> Hosted on AWS with signed BAA, using HIPAA-eligible services only</li>
+        <li><strong>Network Security:</strong> VPC isolation, firewall rules, DDoS protection via Cloudflare</li>
+        <li><strong>Employee Training:</strong> All team members complete HIPAA training and sign confidentiality agreements</li>
+        <li><strong>Incident Response:</strong> Documented incident response plan with defined escalation procedures</li>
+      </ul>
+
+      <h2 id="third-parties">6. Third-Party Services</h2>
+      <p>We use the following third-party services to deliver our platform. Each processes data under a BAA or equivalent data protection agreement:</p>
+      <ul>
+        <li><strong>Amazon Web Services (AWS):</strong> Cloud infrastructure, AI/ML processing (Bedrock), data storage &mdash; BAA signed</li>
+        <li><strong>Twilio:</strong> Communication services (SMS/voice notifications) &mdash; HIPAA BAA signed</li>
+        <li><strong>Cloudflare:</strong> DNS, CDN, and DDoS protection</li>
+        <li><strong>Google Workspace:</strong> Business email and internal collaboration</li>
+      </ul>
+      <p>We do not share PHI with any third party except as necessary to provide our Services, as required by law, or as authorized by the applicable Covered Entity.</p>
+
+      <h2 id="data-retention">7. Data Retention</h2>
+      <ul>
+        <li><strong>PHI and audit logs:</strong> Retained for a minimum of 6 years as required by HIPAA (45 CFR &sect;164.530(j))</li>
+        <li><strong>Account information:</strong> Retained for the duration of the service relationship plus 6 years</li>
+        <li><strong>Usage analytics:</strong> Retained in de-identified form for up to 3 years</li>
+        <li><strong>After retention period:</strong> Data is securely deleted using industry-standard methods</li>
+      </ul>
+
+      <h2 id="your-rights">8. Your Rights</h2>
+
+      <h3>For Healthcare Providers (Our Clients)</h3>
+      <ul>
+        <li>Access and export your account data at any time</li>
+        <li>Request correction of inaccurate account information</li>
+        <li>Terminate your account and request data deletion (subject to retention requirements)</li>
+        <li>Receive breach notification as specified in the BAA</li>
+      </ul>
+
+      <h3>For Patients</h3>
+      <p>Patient rights regarding PHI are governed by the relationship between the patient and their healthcare provider (Covered Entity). Patients should contact their healthcare provider directly to exercise HIPAA rights, including:</p>
+      <ul>
+        <li>Right to access their medical records</li>
+        <li>Right to request amendment of their records</li>
+        <li>Right to an accounting of disclosures</li>
+        <li>Right to request restrictions on use/disclosure</li>
+      </ul>
+
+      <h3>California Residents (CCPA/CPRA)</h3>
+      <p>California residents may have additional rights under the California Consumer Privacy Act. Note that PHI governed by HIPAA is exempt from CCPA. For non-PHI personal information, you may request disclosure, deletion, or opt-out of sale (we do not sell personal information).</p>
+
+      <h2 id="children">9. Children's Privacy</h2>
+      <p>Our Services are designed for healthcare providers and are not directed at individuals under 18. We do not knowingly collect personal information from children. PHI of minor patients is processed solely under the direction of the Covered Entity in accordance with HIPAA.</p>
+
+      <h2 id="changes">10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Notify registered users via email</li>
+        <li>Post a notice on our website</li>
+      </ul>
+      <p>Continued use of our Services after changes constitutes acceptance of the updated policy.</p>
+
+      <h2 id="contact">11. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or our data practices, contact us:</p>
+
+      <div class="contact-box">
+        <p><strong>Compass Medical Admin Services (CMAS)</strong></p>
+        <p>Operated by Compass Vitals, LLC</p>
+        <p>Email: <a href="mailto:privacy@compassscribe.com">privacy@compassscribe.com</a></p>
+        <p>Website: <a href="https://compassscribe.com">compassscribe.com</a></p>
+      </div>
+
+      <p style="margin-top: 32px; font-size: 14px; color: #888;">
+        See also: <a href="/terms-of-use">Terms of Use</a>
+      </p>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Compass Medical Admin Services. All rights reserved.</p>
+      <p>
+        <a href="/privacy-policy">Privacy Policy</a> |
+        <a href="/terms-of-use">Terms of Use</a> |
+        <a href="/contact">Contact Us</a>
+      </p>
+      <p>Operated by Compass Vitals, LLC</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-spy for TOC highlight -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tocLinks = document.querySelectorAll('.toc a');
+      var sections = [];
+      tocLinks.forEach(function (link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function onScroll() {
+        var scrollPos = window.scrollY + 120;
+        var current = null;
+        sections.forEach(function (s) {
+          if (s.el.offsetTop <= scrollPos) current = s;
+        });
+        tocLinks.forEach(function (l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    });
+  </script>
+
+</body>
+</html>
