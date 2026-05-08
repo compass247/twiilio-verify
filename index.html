@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompassScribe — AI-Powered Medical Admin Services</title>
+  <meta name="description" content="CompassScribe by CMAS delivers HIPAA-compliant, AI-powered back-office solutions for physicians — EMR documentation, medical billing, and message triage.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f4c81;
+      text-decoration: none;
+    }
+    .logo span { color: #2b7de9; }
+    nav a {
+      margin-left: 24px;
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #0f4c81; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0f4c81 0%, #2b7de9 100%);
+      color: #fff;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Services ── */
+    .services {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    .services h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin-bottom: 12px;
+    }
+    .services .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #666;
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(15,76,129,0.1);
+    }
+    .card-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #0f4c81;
+      margin-bottom: 12px;
+    }
+    .card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ── Why Section ── */
+    .why {
+      background: #f8fafc;
+      padding: 72px 24px;
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin-bottom: 48px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .why-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .why-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: #0f4c81;
+      color: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .why-item h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .why-item p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* ── Compliance ── */
+    .compliance {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .compliance h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #0f4c81;
+      margin-bottom: 16px;
+    }
+    .compliance p {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .compliance-badges {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f0f7ff;
+      border: 1px solid #d0e4f7;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f4c81;
+    }
+    .badge-icon { font-size: 20px; }
+
+    /* ── Contact ── */
+    .contact {
+      background: linear-gradient(135deg, #0f4c81 0%, #2b7de9 100%);
+      color: #fff;
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .contact p {
+      font-size: 17px;
+      opacity: 0.9;
+      margin-bottom: 8px;
+    }
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a1a1a;
+      color: #999;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 2;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 17px; }
+      .cards { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .compliance-badges { flex-direction: column; align-items: center; }
+    }
+
+    @media print {
+      header, footer, .contact { display: none; }
+      .hero { background: #0f4c81; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">Compass<span>Scribe</span></a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#contact">Contact</a>
+        <a href="/privacy-policy">Privacy</a>
+        <a href="/terms-of-use">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">HIPAA-Compliant &bull; AI-Powered &bull; Physician-Focused</div>
+      <h1 style="margin-top: 24px;">Medical Admin Services,<br>Simplified by AI</h1>
+      <p>CompassScribe helps physicians reclaim their time. We handle EMR documentation, billing codes, and patient message triage &mdash; powered by AI, supervised by trained professionals.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <p class="subtitle">End-to-end back-office support designed for busy physicians and medical practices.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">&#128221;</div>
+        <h3>EMR Note Entry</h3>
+        <p>Submit your clinical notes via voice or text. Our AI transcribes, structures, and enters them into your EMR &mdash; reviewed by a human specialist before finalization.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">&#128200;</div>
+        <h3>Medical Billing &amp; Coding</h3>
+        <p>Automated CPT and ICD-10 code assignment from encounter documentation. Reduce coding errors and accelerate reimbursement cycles.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">&#128172;</div>
+        <h3>Message Triage</h3>
+        <p>AI-powered sorting and prioritization of patient messages, prescription refill requests, and lab result notifications &mdash; so you focus on what matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Section -->
+  <section class="why" id="why">
+    <div class="why-inner">
+      <h2>Why CompassScribe</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">&#9201;</div>
+          <div>
+            <h3>Save 2&ndash;3 Hours Daily</h3>
+            <p>Reduce documentation burden so you can spend more time with patients, not paperwork.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">&#128274;</div>
+          <div>
+            <h3>HIPAA-Compliant Infrastructure</h3>
+            <p>Built on AWS with BAA, encryption at rest and in transit, audit trails, and strict access controls.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">&#129302;</div>
+          <div>
+            <h3>AI + Human Quality Assurance</h3>
+            <p>Every AI-generated output is reviewed by a trained human before it reaches your EMR. Accuracy you can trust.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">&#128176;</div>
+          <div>
+            <h3>Cost-Effective</h3>
+            <p>Fraction of the cost of hiring additional administrative staff, with faster turnaround and consistent quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section class="compliance" id="compliance">
+    <h2>Security &amp; Compliance</h2>
+    <p>We take patient data privacy seriously. Our infrastructure meets the highest standards required for handling Protected Health Information (PHI).</p>
+    <div class="compliance-badges">
+      <div class="badge"><span class="badge-icon">&#128737;</span> HIPAA Compliant</div>
+      <div class="badge"><span class="badge-icon">&#9729;</span> AWS BAA Signed</div>
+      <div class="badge"><span class="badge-icon">&#128274;</span> End-to-End Encryption</div>
+      <div class="badge"><span class="badge-icon">&#128203;</span> Audit Trail Enabled</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Ready to reduce your admin workload? Contact us to learn more.</p>
+    <p>Email: <a href="mailto:info@compassscribe.com">info@compassscribe.com</a></p>
+    <p style="margin-top: 4px;">Operated by Compass Vitals, LLC &mdash; San Diego, CA</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Compass Medical Admin Services (CMAS). All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="/terms-of-use">Terms of Use</a> &nbsp;|&nbsp;
+      <a href="#contact">Contact Us</a>
+    </p>
+    <p>Operated by Compass Vitals, LLC</p>
+  </footer>
+
+</body>
+</html>
