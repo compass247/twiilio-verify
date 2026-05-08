@@ -3,16 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use — CMAS | Compass Medical Admin Services</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f4c81'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Segoe UI,Arial,sans-serif' font-size='16' font-weight='700' fill='%23fff'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f4c81'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Segoe UI,Arial,sans-serif' font-size='16' font-weight='700' fill='%23fff'%3EC%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0f4c81">
+  <meta name="description" content="Terms of Use for Compass Medical Admin Services (CMAS) — usage terms, eligibility, HIPAA BAA requirements, and physician review obligations.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Terms of Use — CMAS">
+  <meta property="og:site_name" content="Compass Medical Admin Services">
+  <meta property="og:description" content="Terms governing use of CMAS AI medical administrative services for licensed healthcare providers.">
+  <meta property="og:url" content="https://compassscribe.com/term/">
+  <title>Terms of Use | CMAS — Compass Medical Admin Services</title>
   <style>
+    /* === SHARED STYLES — keep in sync with privacy-policy.html === */
+    :root { color-scheme: light; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
       font-size: 16px;
       line-height: 1.7;
       color: #1a1a1a;
       background: #fff;
+      font-feature-settings: "ss01", "cv11", "kern";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Skip link (accessibility) ── */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+    }
+    .skip-link:focus {
+      left: 16px;
+      top: 12px;
+      z-index: 200;
+      background: #0f4c81;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
     }
 
     /* ── Header ── */
@@ -36,6 +72,9 @@
       font-weight: 700;
       color: #0f4c81;
       text-decoration: none;
+      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
     }
     .logo span { color: #2b7de9; }
     nav a {
@@ -70,11 +109,31 @@
       font-weight: 700;
       color: #0f4c81;
       margin-bottom: 8px;
+      letter-spacing: -0.01em;
     }
-    .page-title .updated {
-      font-size: 14px;
-      color: #888;
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 6px 10px;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 10px;
     }
+    .doc-meta__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .doc-meta__item svg { color: #9ca3af; }
+    .doc-meta__sep { color: #d1d5db; }
+    .doc-meta__link {
+      color: #2b7de9;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .doc-meta__link:hover { text-decoration: underline; }
 
     /* ── Main Layout ── */
     .content-wrapper {
@@ -130,21 +189,51 @@
       color: #0f4c81;
       margin: 40px 0 16px;
       padding-top: 16px;
+      position: relative;
+      scroll-margin-top: 80px;
+      letter-spacing: -0.01em;
     }
     .content h2:first-child { margin-top: 0; }
+    .content h2[id]::before {
+      content: "#";
+      position: absolute;
+      left: -22px;
+      top: 18px;
+      color: #cbd5e1;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .content h2[id]:hover::before { opacity: 1; }
     .content h3 {
       font-size: 18px;
       font-weight: 600;
       color: #333;
       margin: 24px 0 12px;
+      scroll-margin-top: 80px;
     }
     .content p { margin-bottom: 16px; }
     .content ul, .content ol {
       margin: 0 0 16px 24px;
     }
     .content li { margin-bottom: 8px; }
-    .content strong { color: #0f4c81; }
-    .content a { color: #2b7de9; }
+    .content strong { color: #0f4c81; hyphens: manual; }
+    .content a {
+      color: #2b7de9;
+      text-decoration: underline;
+      text-decoration-color: #bfdbfe;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .content a:hover { text-decoration-color: #2b7de9; }
+
+    /* ── Global focus ring ── */
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid #2b7de9;
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
 
     .highlight-box {
       background: #eff6ff;
@@ -155,6 +244,7 @@
       font-size: 15px;
     }
 
+    /* === PAGE-SPECIFIC === */
     .warning-box {
       background: #fef3c7;
       border-left: 4px solid #f59e0b;
@@ -163,6 +253,7 @@
       border-radius: 0 8px 8px 0;
       font-size: 15px;
     }
+    /* === END PAGE-SPECIFIC === */
 
     .contact-box {
       background: #f9fafb;
@@ -172,6 +263,36 @@
       margin-top: 24px;
     }
     .contact-box p { margin-bottom: 8px; }
+
+    /* ── Trust strip (compliance summary) ── */
+    .trust-strip {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      padding: 24px;
+    }
+    .trust-strip__inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f4c81;
+      padding: 8px 14px;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+    }
+    @media (max-width: 480px) {
+      .trust-pill { width: 100%; justify-content: center; }
+    }
 
     /* ── Footer ── */
     footer {
@@ -195,6 +316,11 @@
       margin: 0 8px;
     }
     footer a:hover { text-decoration: underline; }
+    .footer-meta {
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .footer-meta a { margin: 0 4px; }
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
@@ -204,6 +330,7 @@
       .page-title { padding: 24px 16px 0; }
       .page-title h1 { font-size: 26px; }
       nav { display: none; }
+      .content h2[id]::before { display: none; }
     }
     @media (min-width: 769px) {
       .toc-mobile { display: none; }
@@ -237,20 +364,47 @@
       text-decoration: none;
     }
 
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
     /* ── Print ── */
     @media print {
-      header, .toc, .toc-mobile, footer, .breadcrumb { display: none; }
+      header, .toc, .toc-mobile, footer, .breadcrumb, .skip-link, .trust-strip, .doc-meta__link { display: none; }
       .content-wrapper { padding: 0; }
       .content { max-width: 100%; }
+      body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+      .content a[href^="http"]::after,
+      .content a[href^="mailto"]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #555;
+      }
+      .content h2, .content h3 { break-after: avoid; }
+      .highlight-box, .warning-box, .contact-box { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <!-- Header -->
   <header>
     <div class="header-inner">
-      <a href="/" class="logo">CMAS<span>.</span></a>
+      <a href="/" class="logo" aria-label="CMAS home">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="margin-right:8px">
+          <rect width="32" height="32" rx="6" fill="#0f4c81"/>
+          <path d="M22 11.5a7 7 0 1 0 0 9" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        CMAS<span>.</span>
+      </a>
       <nav>
         <a href="/">Home</a>
         <a href="/services">Services</a>
@@ -268,7 +422,18 @@
   <!-- Page Title -->
   <div class="page-title">
     <h1>Terms of Use</h1>
-    <p class="updated">Last Updated: May 7, 2026</p>
+    <div class="doc-meta">
+      <span class="doc-meta__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Last updated May 7, 2026
+      </span>
+      <span class="doc-meta__sep" aria-hidden="true">·</span>
+      <span class="doc-meta__item">Version 1.0</span>
+      <span class="doc-meta__sep" aria-hidden="true">·</span>
+      <span class="doc-meta__item">~10 min read</span>
+      <span class="doc-meta__sep" aria-hidden="true">·</span>
+      <a class="doc-meta__item doc-meta__link" href="javascript:window.print()" aria-label="Print this page">Print</a>
+    </div>
   </div>
 
   <!-- Mobile TOC -->
@@ -327,11 +492,11 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="content">
+    <main id="main-content" class="content">
 
       <h2 id="acceptance">1. Acceptance of Terms</h2>
       <p>By accessing or using the services provided by Compass Medical Admin Services ("CMAS," "we," "our," or "us"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, you may not use our Services.</p>
-      <p>These Terms, together with our <a href="/privacy-policy">Privacy Policy</a> and any Business Associate Agreement (BAA) executed between you and CMAS, constitute the entire agreement governing your use of our Services.</p>
+      <p>These Terms, together with our <a href="/privacy/">Privacy Policy</a> and any Business Associate Agreement (BAA) executed between you and CMAS, constitute the entire agreement governing your use of our Services.</p>
 
       <h2 id="services">2. Description of Services</h2>
       <p>CMAS provides AI-powered medical administrative services to licensed healthcare providers, including:</p>
@@ -491,22 +656,44 @@
       </div>
 
       <p style="margin-top: 32px; font-size: 14px; color: #888;">
-        See also: <a href="/privacy-policy">Privacy Policy</a>
+        See also: <a href="/privacy/">Privacy Policy</a>
       </p>
 
     </main>
   </div>
+
+  <!-- Trust strip (compliance summary) -->
+  <aside class="trust-strip" aria-label="Compliance summary">
+    <div class="trust-strip__inner">
+      <div class="trust-pill">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+        HIPAA Aligned
+      </div>
+      <div class="trust-pill">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        AWS BAA · Encryption at Rest
+      </div>
+      <div class="trust-pill">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        TLS 1.2+ in Transit
+      </div>
+    </div>
+  </aside>
 
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
       <p>&copy; 2026 Compass Medical Admin Services. All rights reserved.</p>
       <p>
-        <a href="/privacy-policy">Privacy Policy</a> |
-        <a href="/terms-of-use">Terms of Use</a> |
+        <a href="/privacy/">Privacy Policy</a> |
+        <a href="/term/">Terms of Use</a> |
         <a href="/contact">Contact Us</a>
       </p>
       <p>Operated by Compass Vitals, LLC</p>
+      <p class="footer-meta">
+        <a href="mailto:legal@compassscribe.com">legal@compassscribe.com</a> ·
+        <a href="mailto:privacy@compassscribe.com">privacy@compassscribe.com</a>
+      </p>
     </div>
   </footer>
 
